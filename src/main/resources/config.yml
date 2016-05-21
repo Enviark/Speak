@@ -1,0 +1,7 @@
+#
+#  S P E A K
+#  super simple config
+#
+
+# default language
+default: en
