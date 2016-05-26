@@ -20,6 +20,7 @@ object Speak {
         plugin.saveDefaultConfig()
 
         defaultLocale = Locale.forLanguageTag(plugin.config.getString("default"))
+        plugin.logger.info("Using " + defaultLocale.displayLanguage + " as default language.");
 
         // allow color codes with the '&' char
         formatters.register(ColorFormatter('&'))
