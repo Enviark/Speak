@@ -7,7 +7,7 @@ import javax.script.ScriptEngineManager
 class ArgumentFormatter : MessageFormatter {
 
     val engine = ScriptEngineManager().getEngineByName("nashorn")
-    val regex = Pattern.compile("/\\{(.+?)\\}/g")
+    val regex = Pattern.compile("\\{(.+?)\\}")
 
     override fun format(text: String, args: Map<String, Any>): String {
         engine.setBindings(engine.createBindings(), ScriptContext.ENGINE_SCOPE)
